@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 
 :root {
-    /* colors */
+      /* colors */
     --header-height: 3rem;
 
     --first-color: #2134a0;
@@ -127,7 +127,6 @@ img {
 }
 
 /* layout */
-
 .bd-container {
     max-width: 1024px;
     width: calc(100% - 2rem);
@@ -316,7 +315,6 @@ img {
 .home__social-icon:hover {
     color: var(--first-color-light);
 }
-
 /*buttons*/
 .button {
     display: inline-block;
@@ -363,6 +361,7 @@ img {
     font-size: var(--h2-font-size);
     font-weight: var(--font-semi-bold);
     color: var(--first-color);
+    margin: 20px;
 }
 
 .about__number {
@@ -374,7 +373,7 @@ img {
 .about__img {
     justify-self: center;
     width: 220px;
-    border-radius: 0.5rem;
+    border-radius: 20rem;
 }
 
 /* qualification*/
@@ -416,6 +415,7 @@ img {
 .qualification__work {
     display: block;
 }
+
 
 /*services*/
 
@@ -586,126 +586,56 @@ img {
     font-size: var(--smaller-font-size);
     color: var(--first-color-light);
 }
+/* =====================
+   Base styles (default for mobile first)
+   ===================== */
 
-/*media queries*/
+/* Very small devices (iPhone 5, SE, older Androids) */
+@media screen and (max-width: 320px) {
+  .home__img {
+    width: 100%;
+    padding-top: 50px;
+    padding-left: 15px;
+  }
+
+  .home__name {
+    font-size: 1.6rem;
+  }
+
+  .home__profession {
+    font-size: 1rem;
+  }
+
+  .home__greeting {
+    font-size: 0.9rem;
+  }
+ 
+}
+
+/* Small devices (≤576px) */
 @media screen and (max-width: 576px) {
-    .home__img img {
-        width: 400px;
-        padding-top: 100px;
-        padding-left: 100px;
-    }
-
-}
-@media screen and (min-width: 576px) {
-    .home__img img {
-        width: 480px;
-        padding-top: 120px;
-        padding-left: 110px;
-    }
-
-    .about__container,
-    .qualification__container,
-    .services__container,
-    .portfolio__container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .contact__form {
-        width: 450px;
-        justify-self: center;
-    }
+  .home__img img {
+    width: 100%;
+    padding-top: 60px;
+    border: solid 1px white;
+  }
+  
 }
 
-@media screen and (min-width: 768px) {
-    body {
-        margin: 0;
-    }
-
-    .section {
-        padding-top: 6rem;
-    }
-
-    .section-title {
-        margin-bottom: var(--mb-5);
-    }
-
-    .nav {
-        height: calc(var(--header-height) + 1.5rem);
-    }
-
-    .nav__list {
-        display: flex;
-        
-    }
-
-    .nav__item {
-        margin-left: var(--mb-5);
-        margin-bottom: 0;
-    }
-
-    .nav__toggle {
-        display: none;
-       
-    }
-
-    .home__container {
-        height: 100vh;
-        grid-template-rows: max-content 0.5fr;
-        align-content: flex-end;
-    }
-
-    .home__greeting {
-        font-size: 1.25rem;
-    }
-
-    .home__profession {
-        font-size: 2rem;
-    }
-
-    .home__name {
-        font-size: 3.5rem;
-    }
-
-    .home__social {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .home__social-icon {
-        margin-right: var(--mb-3);
-        margin-bottom: 0;
-    }
-
-    .home__img img {
-        width: 450px;
-    }
-
-    .about__description {
-        text-align: initial;
-    }
-
-    .about__img {
-        width: 350px;
-    }
-
-    .qualification__box {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .services__container,
-    .portfolio__container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+/* Medium devices (≤768px) */
 @media screen and (max-width: 768px) {
-    .nav__menu {
+  .home__img img {
+    width: 100%;
+    padding-top: 100px;
+  }
+
+  .nav__menu {
     position: fixed;
     top: 0;
     right: -100%; /* hidden off screen */
     width: 70%;
     height: 100vh;
-    background-color: #353030; /* dark so links are visible */
+    background-color: #353030;
     padding: 2rem;
     transition: 0.3s ease-in-out;
     z-index: 100;
@@ -724,35 +654,119 @@ img {
   }
 
   .nav__toggle {
-    display: block; /* 👈 only visible on small screens */
+    display: block;
     font-size: 2rem;
     cursor: pointer;
     color: #fff;
     z-index: 101;
   }
 
-  /* When .show-menu is active, reveal menu */
   .show-menu {
     right: 0;
+  }
 }
+
+/* Large devices (≥768px) */
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+
+  .section {
+    padding-top: 6rem;
+  }
+
+  .section-title {
+    margin-bottom: var(--mb-5);
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+
+  .nav__list {
+    display: flex;
+  }
+
+  .nav__item {
+    margin-left: var(--mb-5);
+    margin-bottom: 0;
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+
+  .home__container {
+    height: 100vh;
+    grid-template-rows: max-content 0.5fr;
+    align-content: flex-end;
+  }
+
+  .home__greeting {
+    font-size: 1.25rem;
+  }
+
+  .home__profession {
+    font-size: 2rem;
+  }
+
+  .home__name {
+    font-size: 3.5rem;
+  }
+
+  .home__social {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .home__social-icon {
+    margin-right: var(--mb-3);
+    margin-bottom: 0;
+  }
+
+  .home__img img {
+    width: 100%;
+  }
+
+  .about__description {
+    text-align: initial;
+  }
+
+  .about__img {
+    width: 350px;
+  }
+
+  .qualification__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .services__container,
+  .portfolio__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
+
+/* Extra large devices (≥1024px) */
 @media screen and (min-width: 1024px) {
-    .home__img {
-        margin-top: 10px;
-    }
+  .home__img {
+    margin-top: 10px;
+  }
 
-    .home__img img {
-        width: 400px;
-        position: relative;
-        margin-top: 1px;
-    }
+  .home__img img {
+    width: 100%;
+    position: relative;
+    margin-top: 1px;
+  }
 
-    .bd-container {
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .bd-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .qualification__container {
-        column-gap: 6rem;
-    }
+  .qualification__container {
+    column-gap: 6rem;
+  }
 }
+
