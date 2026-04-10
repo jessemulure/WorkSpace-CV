@@ -616,17 +616,16 @@ img {
 @media screen and (max-width: 576px) {
   .home__img img {
     width: 100%;
-    padding-top: 60px;
-    border: solid 1px white;
+    padding-top: 40px;
   }
   
 }
 
-/* Medium devices (≤768px) */
-@media screen and (max-width: 768px) {
+/* Medium devices (≤767px) */
+@media screen and (max-width: 767px) {
   .home__img img {
     width: 100%;
-    padding-top: 100px;
+    padding-top: 110px;
   }
 
   .nav__menu {
@@ -657,8 +656,13 @@ img {
     display: block;
     font-size: 2rem;
     cursor: pointer;
-    color: #fff;
+    color: #0a0000;
     z-index: 101;
+  }
+   .nav__logo {
+    display: block;
+    cursor: pointer;
+    color: #0a0000;
   }
 
   .show-menu {
