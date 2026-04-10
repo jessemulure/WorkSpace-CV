@@ -625,7 +625,7 @@ img {
 @media screen and (max-width: 767px) {
   .home__img img {
     width: 100%;
-    padding-top: 210px;
+    padding-top: 10px;
   }
 
   .nav__menu {

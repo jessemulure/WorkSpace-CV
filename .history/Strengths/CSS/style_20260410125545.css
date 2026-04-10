@@ -616,7 +616,7 @@ img {
 @media screen and (max-width: 576px) {
   .home__img img {
     width: 100%;
-    padding-top: 100px;
+    padding-top: 40px;
   }
   
 }
@@ -625,7 +625,7 @@ img {
 @media screen and (max-width: 767px) {
   .home__img img {
     width: 100%;
-    padding-top: 210px;
+    padding-top: 50px;
   }
 
   .nav__menu {
@@ -656,13 +656,8 @@ img {
     display: block;
     font-size: 2rem;
     cursor: pointer;
-    color: #0a0000;
+    color: #fff;
     z-index: 101;
-  }
-   .nav__logo {
-    display: block;
-    cursor: pointer;
-    color: #0a0000;
   }
 
   .show-menu {
